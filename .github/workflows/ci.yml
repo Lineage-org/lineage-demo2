@@ -9,4 +9,3 @@ jobs:
     uses: NixLine-org/.github/.github/workflows/nixline-ci.yml@stable
     with:
       channel: stable
-      consumption_pattern: configuration-driven

@@ -10,7 +10,7 @@ ref = "stable"
 # Organization configuration - automatically replaces template variables
 name = "NixLine-org"
 security_email = "security@nixline.org"
-default_team = "jasonodoom"
+default_team = "@NixLine-org/maintainers"
 
 [packs]
 # Selective pack enablement - choose which policies to adopt
@@ -44,11 +44,11 @@ markdown = { indent_size = 2 }
 [packs.codeowners]
 # Custom ownership rules for NixLine-org structure
 rules = [
-  { pattern = "*", owners = ["jasonodoom"], comment = "Default owners" },
+  { pattern = "*", owners = ["@NixLine-org/maintainers"], comment = "Default owners" },
   { pattern = "*.py", owners = ["jasonodoom"], comment = "Python code" },
   { pattern = "*.{js,jsx,ts,tsx}", owners = ["jasonodoom"], comment = "Frontend code" },
-  { pattern = "*.{java,kt,scala}", owners = ["jasonodoom"], comment = "JVM languages" },
-  { pattern = "*.rs", owners = ["jasonodoom"], comment = "Rust code" },
+  { pattern = "*.{java,kt,scala}", owners = ["@NixLine-org/maintainers"], comment = "JVM languages" },
+  { pattern = "*.rs", owners = ["@NixLine-org/maintainers"], comment = "Rust code" },
   { pattern = "docs/**", owners = ["jasonodoom"], comment = "Documentation" },
   { pattern = ".github/**", owners = ["jasonodoom"], comment = "CI/CD and workflows" },
   { pattern = "*.nix", owners = ["jasonodoom"], comment = "Nix expressions" },
