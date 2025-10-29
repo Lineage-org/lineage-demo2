@@ -1,0 +1,18 @@
+name: Policy Sync
+
+on:
+  schedule:
+    # Weekly on Sunday at 2 PM UTC
+    - cron: '0 14 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    uses: NixLine-org/.github/.github/workflows/nixline-policy-sync.yml@stable
+    with:
+      consumption_pattern: configuration-driven
+      baseline_repo: NixLine-org/nixline-baseline
+      baseline_ref: stable
