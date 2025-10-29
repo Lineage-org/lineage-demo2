@@ -11,10 +11,10 @@
 * @NixLine-org/maintainers
 
 # Python code
-*.py jasonodoom
+*.py @jasonodoom
 
 # Frontend code
-*.{js,jsx,ts,tsx} jasonodoom
+*.{js,jsx,ts,tsx} @jasonodoom
 
 # JVM languages
 *.{java,kt,scala} @NixLine-org/maintainers
@@ -23,16 +23,16 @@
 *.rs @NixLine-org/maintainers
 
 # Documentation
-docs/** jasonodoom
+docs/** @jasonodoom
 
 # CI/CD and workflows
-.github/** jasonodoom
+.github/** @jasonodoom
 
 # Nix expressions
-*.nix jasonodoom
+*.nix @jasonodoom
 
 # Container configurations
-Dockerfile* jasonodoom
+Dockerfile* @jasonodoom
 
 # Configuration files
-*.toml jasonodoom
+*.toml @jasonodoom
