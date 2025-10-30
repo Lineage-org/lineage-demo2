@@ -4,6 +4,9 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   nixline-ci:
     uses: NixLine-org/.github/.github/workflows/nixline-ci.yml@stable
