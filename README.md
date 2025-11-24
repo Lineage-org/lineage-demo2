@@ -1,6 +1,6 @@
-# NixLine Demo2 - Configuration-Driven Consumer
+# Lineage Demo2 - Configuration-Driven Consumer
 
-This repository demonstrates advanced NixLine configuration using `.nixline.toml` for comprehensive customization without forking the NixLine baseline repository.
+This repository demonstrates advanced Lineage configuration using `.lineage.toml` for comprehensive customization without forking the Lineage baseline repository.
 
 ## Key Features Demonstrated
 
@@ -24,33 +24,33 @@ This repository demonstrates advanced NixLine configuration using `.nixline.toml
 - Configuration-driven policy materialization using enhanced sync app
 - Runtime configuration passing to parameterized packs
 - Custom file support for complete content override
-- Instant updates from NixLine baseline with local customization
+- Instant updates from Lineage baseline with local customization
 
 ## Quick Start
 
 View Current Configuration:
 ```bash
-cat .nixline.toml
+cat .lineage.toml
 ```
 
 Sync Policies (Enhanced Version):
 ```bash
 # Sync with configuration file
-nix run github:NixLine-org/nixline-baseline#sync
+nix run github:Lineage-org/lineage-baseline#sync
 
 # Preview changes without applying
-nix run github:NixLine-org/nixline-baseline#sync -- --dry-run
+nix run github:Lineage-org/lineage-baseline#sync -- --dry-run
 
 # Override specific values
-nix run github:NixLine-org/nixline-baseline#sync -- --override org.name=MyCompany
+nix run github:Lineage-org/lineage-baseline#sync -- --override org.name=MyCompany
 
 # Use custom config file
-nix run github:NixLine-org/nixline-baseline#sync -- --config my-config.toml
+nix run github:Lineage-org/lineage-baseline#sync -- --config my-config.toml
 ```
 
 Validate Policies:
 ```bash
-nix run github:NixLine-org/nixline-baseline#check
+nix run github:Lineage-org/lineage-baseline#check
 ```
 
 ## Configuration Highlights
@@ -100,7 +100,7 @@ After running sync, the following files are materialized:
 | Feature | Demo1 (Basic) | Demo2 (Advanced) |
 |---------|---------------|------------------|
 | Customization | Pack selection only | Full parameterization |
-| Organization | Uses NixLine defaults | Custom AcmeCorp branding |
+| Organization | Uses Lineage defaults | Custom AcmeCorp branding |
 | Configuration | CLI arguments only | TOML configuration file |
 | Code ownership | Generic rules | Multi-team structure |
 | Flexibility | Limited | Extensive customization |
@@ -108,10 +108,10 @@ After running sync, the following files are materialized:
 ## Architectural Benefits
 
 **Zero Fork Maintenance**
-No need to fork and maintain the NixLine baseline repository. Automatic updates from the upstream NixLine baseline with local customization preserved. Configuration-driven policy inheritance.
+No need to fork and maintain the Lineage baseline repository. Automatic updates from the upstream Lineage baseline with local customization preserved. Configuration-driven policy inheritance.
 
 **Scalable Governance**
-One .nixline.toml file controls all policies. Consistent customization across all repositories. Easy to replicate across organization.
+One .lineage.toml file controls all policies. Consistent customization across all repositories. Easy to replicate across organization.
 
 **Developer Experience**
 Self-documenting configuration. Preview changes with --dry-run. Override any setting via CLI. Complete file override capability with custom_file.
@@ -133,8 +133,8 @@ nix run .#sync -- --override packs.editorconfig.line_length=100
 Multi-Repository Consistency:
 ```bash
 # Use same config across multiple repos
-cp .nixline.toml ../other-acme-repo/
-cd ../other-acme-repo && nix run github:NixLine-org/nixline-baseline#sync
+cp .lineage.toml ../other-acme-repo/
+cd ../other-acme-repo && nix run github:Lineage-org/lineage-baseline#sync
 ```
 
 Custom File Override (Example):
@@ -147,7 +147,7 @@ echo "Proprietary License for AcmeCorp" > my-license.txt
 # custom_file = "my-license.txt"
 
 # Sync to apply custom license
-nix run github:NixLine-org/nixline-baseline#sync
+nix run github:Lineage-org/lineage-baseline#sync
 ```
 
 ## Why This Architecture Matters
@@ -156,6 +156,6 @@ This approach solves the organizational governance fork problem:
 
 Traditional Approach: Every organization forks their own governance repository. Result: 100 organizations = 100 divergent governance repositories that become outdated.
 
-NixLine Approach: One centrally maintained NixLine baseline repository + organization-specific configuration files. Result: 100 organizations = 1 shared baseline + 100 config files.
+Lineage Approach: One centrally maintained Lineage baseline repository + organization-specific configuration files. Result: 100 organizations = 1 shared baseline + 100 config files.
 
-Improvements to the shared NixLine baseline repository benefit all organizations automatically, while each organization maintains full customization control through their configuration files.
+Improvements to the shared Lineage baseline repository benefit all organizations automatically, while each organization maintains full customization control through their configuration files.

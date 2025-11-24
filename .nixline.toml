@@ -1,16 +1,16 @@
-# .nixline.toml - Configuration-driven NixLine consumption
+# .lineage.toml - Configuration-driven Lineage consumption
 # This file demonstrates advanced customization without forking the baseline
-# Use 'nix run github:NixLine-org/nixline-baseline#list-licenses' to see available license types
+# Use 'nix run github:Lineage-org/lineage-baseline#list-licenses' to see available license types
 
 [baseline]
-repo = "github:NixLine-org/nixline-baseline"
+repo = "github:Lineage-org/lineage-baseline"
 ref = "stable"
 
 [organization]
 # Organization configuration - automatically replaces template variables
-name = "NixLine-org"
-security_email = "security@nixline.org"
-default_team = "@NixLine-org/maintainers"
+name = "Lineage-org"
+security_email = "security@lineage.org"
+default_team = "@Lineage-org/maintainers"
 
 [packs]
 # Selective pack enablement - choose which policies to adopt
@@ -42,13 +42,13 @@ yaml = { indent_size = 2 }
 markdown = { indent_size = 2 }
 
 [packs.codeowners]
-# Custom ownership rules for NixLine-org structure
+# Custom ownership rules for Lineage-org structure
 rules = [
-  { pattern = "*", owners = ["@NixLine-org/maintainers"], comment = "Default owners" },
+  { pattern = "*", owners = ["@Lineage-org/maintainers"], comment = "Default owners" },
   { pattern = "*.py", owners = ["jasonodoom"], comment = "Python code" },
   { pattern = "*.{js,jsx,ts,tsx}", owners = ["jasonodoom"], comment = "Frontend code" },
-  { pattern = "*.{java,kt,scala}", owners = ["@NixLine-org/maintainers"], comment = "JVM languages" },
-  { pattern = "*.rs", owners = ["@NixLine-org/maintainers"], comment = "Rust code" },
+  { pattern = "*.{java,kt,scala}", owners = ["@Lineage-org/maintainers"], comment = "JVM languages" },
+  { pattern = "*.rs", owners = ["@Lineage-org/maintainers"], comment = "Rust code" },
   { pattern = "docs/**", owners = ["jasonodoom"], comment = "Documentation" },
   { pattern = ".github/**", owners = ["jasonodoom"], comment = "CI/CD and workflows" },
   { pattern = "*.nix", owners = ["jasonodoom"], comment = "Nix expressions" },
@@ -57,7 +57,7 @@ rules = [
 ]
 
 [packs.security]
-# Security policy tailored to NixLine-org requirements
+# Security policy tailored to Lineage-org requirements
 response_time = "within 2 business days"
 disclosure_policy = "coordinated"
 
@@ -71,13 +71,13 @@ supported_versions = [
 [packs.license]
 # License configuration with SPDX fetching
 type = "Apache-2.0"
-holder = "NixLine Contributors"
+holder = "Lineage Contributors"
 year = "2024"
 fetch_from_source = true  # Fetch from SPDX (default)
 # custom_license_file = "./custom-license.txt"  # For custom licenses
 
 [packs.precommit]
-# Pre-commit configuration for NixLine-org standards
+# Pre-commit configuration for Lineage-org standards
 hooks = [
   "trailing-whitespace",
   "end-of-file-fixer",
